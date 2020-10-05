@@ -20,7 +20,7 @@ See repository branches for supported hadoop versions
 
 To deploy an example HDFS cluster, run:
 ```
-  docker-compose up -d
+  docker-compose up -d 
 ```
 
 Run example wordcount job:

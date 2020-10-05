@@ -2,10 +2,13 @@ FROM bde2020/hadoop-base:2.0.0-hadoop3.2.1-java8
 
 MAINTAINER Ivan Ermilov <ivan.s.ermilov@gmail.com>
 
-COPY WordCount.jar /opt/hadoop/applications/WordCount.jar
+ENV APP_DIR="/opt/hadoop/applications"
+ENV APP_MAIN_CLASS="WordCount"
 
-ENV JAR_FILEPATH="/opt/hadoop/applications/WordCount.jar"
-ENV CLASS_TO_RUN="WordCount"
+COPY WordCount.java ${APP_DIR}/WordCount.java
+
+ENV JAR_FILEPATH="${APP_DIR}/${APP_MAIN_CLASS}.jar"
+ENV CLASS_TO_RUN="${APP_MAIN_CLASS}"
 ENV PARAMS="/input /output"
 
 ADD run.sh /run.sh
