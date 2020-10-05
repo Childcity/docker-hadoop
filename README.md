@@ -1,5 +1,12 @@
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/big-data-europe/Lobby)
 
+# Childcity Changes
+
+1. I have add to WordCount.java to ./submit/WordCount.java
+2. I have changed ./submit/Dockerfile and ./submit/run.sh for correct compilation of WordCount.java into WordCount.jar file
+  and executing it in cluster.
+3. I have changed "DOCKER_NETWORK = dockerhadoop_default" in Makefile , because there wa a typo.
+
 # Changes
 
 Version 2.0.0 introduces uses wait_for_it script for the cluster startup
@@ -13,7 +20,7 @@ See repository branches for supported hadoop versions
 
 To deploy an example HDFS cluster, run:
 ```
-  docker-compose up
+  docker-compose up -d
 ```
 
 Run example wordcount job:
