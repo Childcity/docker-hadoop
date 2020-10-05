@@ -2,12 +2,13 @@
 
 # Childcity Changes
 
-1. I have add to WordCount.java to ./submit/WordCount.java
-2. I have changed ./submit/Dockerfile and ./submit/run.sh for correct compilation of WordCount.java into WordCount.jar file
+1. I have add `WordCount.java` to `./submit/WordCount.java`
+2. I have changed `./submit/Dockerfile` and `./submit/run.sh` for correct compilation of `WordCount.java` into `WordCount.jar` file
   and executing it in cluster.
-3. I have changed "DOCKER_NETWORK = dockerhadoop_default" in Makefile , because there wa a typo.
+3. I have changed `"DOCKER_NETWORK = dockerhadoop_default"` in `Makefile` , because there was a typo.
 
-# Changes
+
+# General Changes
 
 Version 2.0.0 introduces uses wait_for_it script for the cluster startup
 
@@ -20,7 +21,7 @@ See repository branches for supported hadoop versions
 
 To deploy an example HDFS cluster, run:
 ```
-  docker-compose up -d 
+  docker-compose up -d && wait 7
 ```
 
 Run example wordcount job:
