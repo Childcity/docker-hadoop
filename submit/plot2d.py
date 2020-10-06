@@ -30,6 +30,7 @@ if __name__ == "__main__":
             xCluster = []
             yCluster = []
             for el in file_content:
+                #print(el[0],el[1],el[2],el[3],el[4])
                 cluster.append(float(el[0]) + 999)
                 xCluster.append(float(el[1]))
                 yCluster.append(float(el[2]))
