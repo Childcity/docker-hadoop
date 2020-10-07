@@ -9,7 +9,7 @@ COPY k-means/ ${APP_DIR}/k-means
 
 ENV JAR_FILEPATH="${APP_DIR}/${APP_MAIN_CLASS}.jar"
 ENV CLASS_TO_RUN="${APP_MAIN_CLASS}"
-ENV PARAMS="/input /output 6 2 0.0005"
+ENV PARAMS="/input /output 8 2 0.0005"
 
 ADD run.sh /run.sh
 RUN chmod a+x /run.sh
